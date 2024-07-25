@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerBattle1 : MonoBehaviour
+public class PC : MonoBehaviour
 {
     public Rigidbody rigidBody;
     public FixedJoystick joystick;
@@ -15,11 +15,6 @@ public class PlayerControllerBattle1 : MonoBehaviour
     private float minZ = -11;
     private float maxZ = 50;
     public bool isMoving;
-
-    private void Start()
-    {
-        anim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
-    }
 
     private void Update()
     {
@@ -55,7 +50,7 @@ public class PlayerControllerBattle1 : MonoBehaviour
     private IEnumerator ShootArrowCoroutine()
     {
         yield return new WaitForSeconds(0.3f);
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2.2f, transform.position.z + 3.5f);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f);
         Instantiate(arrow, pos, transform.rotation);
     }
 

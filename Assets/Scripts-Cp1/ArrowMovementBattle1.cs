@@ -8,13 +8,11 @@ public class ArrowMovementBattle1 : MonoBehaviour
     private float topBound = 15.0f;
     private float lowerBound = -15.0f;
     private Strike strike;
-    // Start is called before the first frame update
     void Start()
     {
-       //strike = GameObject.Find("Strike Area").GetComponent<Strike>();
+       strike = GameObject.Find("Strike Area").GetComponent<Strike>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -40,10 +38,10 @@ public class ArrowMovementBattle1 : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Enemy"))
         {
-            //if(strike.otherObj.Contains(other))
-            //{
-            //    strike.otherObj.Remove(other);
-            //}
+            if (strike.otherObj.Contains(other))
+            {
+                strike.otherObj.Remove(other);
+            }
             Destroy(gameObject);
             Destroy(other.gameObject);
         }

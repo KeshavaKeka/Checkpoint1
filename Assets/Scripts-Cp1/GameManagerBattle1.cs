@@ -13,7 +13,7 @@ public class GameManagerBattle1 : MonoBehaviour
     private float startTime = 2.5f;
     private int number = 0;
     public int maxEnemies = 25;
-    public PlayerControllerBattle1 script;
+    public PC script;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI levelCompletedText;
     public Damage damage;

@@ -7,12 +7,12 @@ public class Strike : MonoBehaviour
     private bool allowStrike = false;
     private Transform player;
     public List<Collider> otherObj = new List<Collider>();
-    //private Animator anim;
+    private Animator anim;
 
     private void Start()
     {
         player = GameObject.Find("Player").transform;
-        //anim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
+        anim = GameObject.Find("PlayerCharacter").GetComponent<Animator>();
     }
 
     private void Update()
@@ -39,7 +39,7 @@ public class Strike : MonoBehaviour
 
     public void StrikeEnemy()
     {
-        //anim.SetBool("Punch", true);
+        anim.SetBool("Punch", true);
         StartCoroutine(ResetPunchAnimation());
         if (allowStrike && otherObj.Count != 0)
         {
@@ -63,6 +63,6 @@ public class Strike : MonoBehaviour
     private IEnumerator ResetPunchAnimation()
     {
         yield return new WaitForSeconds(0.25f);
-        //anim.SetBool("Punch", false);
+        anim.SetBool("Punch", false);
     }
 }
