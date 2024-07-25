@@ -50,7 +50,7 @@ public class PC : MonoBehaviour
     private IEnumerator ShootArrowCoroutine()
     {
         yield return new WaitForSeconds(0.3f);
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z + 3f);
         Instantiate(arrow, pos, transform.rotation);
     }
 

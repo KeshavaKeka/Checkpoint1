@@ -25,7 +25,7 @@ public class Strike : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && other != null)
         {
             otherObj.Add(other);
             allowStrike = true;
@@ -34,30 +34,42 @@ public class Strike : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        otherObj.Remove(other);
+        if (other.gameObject.CompareTag("Enemy") && other != null)
+        {
+            otherObj.Remove(other);
+        }
     }
 
     public void StrikeEnemy()
     {
         anim.SetBool("Punch", true);
         StartCoroutine(ResetPunchAnimation());
+
         if (allowStrike && otherObj.Count != 0)
         {
             Collider des = otherObj[0];
-            Vector3 direction = (des.transform.position - player.position).normalized;
-            direction.y = 0;
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            player.rotation = Quaternion.Slerp(player.rotation, lookRotation, 10f);
-            otherObj.RemoveAt(0);
-            StartCoroutine(PunchEnemy(des));
+
+            if (des != null && des.gameObject != null)
+            {
+                Vector3 direction = (des.transform.position - player.position).normalized;
+                direction.y = 0;
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                player.rotation = Quaternion.Slerp(player.rotation, lookRotation, 10f);
+
+                otherObj.RemoveAt(0);
+                StartCoroutine(PunchEnemy(des));
+            }
         }
     }
 
     private IEnumerator PunchEnemy(Collider des)
     {
         yield return new WaitForSeconds(0.5f);
-        if (des.gameObject != null)
+
+        if (des != null && des.gameObject != null)
+        {
             Destroy(des.gameObject);
+        }
     }
 
     private IEnumerator ResetPunchAnimation()
