@@ -5,8 +5,8 @@ using UnityEngine;
 public class ArrowMovementBattle1 : MonoBehaviour
 {
     public float speed = 40.0f;
-    private float topBound = 15.0f;
-    private float lowerBound = -15.0f;
+    private float zBound = 40f;
+    private float xBound = 50.0f;
     private Strike strike;
     void Start()
     {
@@ -16,19 +16,19 @@ public class ArrowMovementBattle1 : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        if (transform.position.z > topBound)
+        if (transform.position.z > zBound)
         {
             Destroy(gameObject);
         }
-        else if (transform.position.z < lowerBound)
+        else if (transform.position.z < -zBound)
         {
             Destroy(gameObject);
         }
-        if (transform.position.x > topBound)
+        if (transform.position.x > xBound)
         {
             Destroy(gameObject);
         }
-        else if (transform.position.x < lowerBound)
+        else if (transform.position.x < -xBound)
         {
             Destroy(gameObject);
         }

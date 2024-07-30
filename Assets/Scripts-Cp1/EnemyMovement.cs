@@ -25,7 +25,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        GameObject enemyChar1 = GameObject.Find("EnemyChar1");
+        Transform child = transform.Find("EnemyChar1");
+        GameObject enemyChar1 = child.gameObject;
         if (enemyChar1 != null)
         {
             anim = enemyChar1.GetComponent<Animator>();

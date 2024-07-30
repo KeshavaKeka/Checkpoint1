@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Strike : MonoBehaviour
 {
-    private bool allowStrike = false;
+    //private bool allowStrike = false;
     private Transform player;
     public List<Collider> otherObj = new List<Collider>();
     private Animator anim;
@@ -17,10 +17,10 @@ public class Strike : MonoBehaviour
 
     private void Update()
     {
-        if (otherObj.Count == 0)
-        {
-            allowStrike = false;
-        }
+        //if (otherObj.Count == 0)
+        //{
+        //    allowStrike = false;
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +28,7 @@ public class Strike : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") && other != null)
         {
             otherObj.Add(other);
-            allowStrike = true;
+            //allowStrike = true;
         }
     }
 
@@ -45,7 +45,8 @@ public class Strike : MonoBehaviour
         anim.SetBool("Punch", true);
         StartCoroutine(ResetPunchAnimation());
 
-        if (allowStrike && otherObj.Count != 0)
+        //if (allowStrike && otherObj.Count != 0)
+        if (otherObj.Count != 0)
         {
             Collider des = otherObj[0];
 

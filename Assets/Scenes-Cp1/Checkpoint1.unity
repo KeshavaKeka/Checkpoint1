@@ -1466,7 +1466,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 74
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1492,13 +1492,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.31730464, y: 0, z: 0, w: 0.94832367}
-  m_LocalPosition: {x: 0, y: 15.23, z: -21.79}
+  m_LocalRotation: {x: 0.20876522, y: 0, z: 0, w: 0.97796583}
+  m_LocalPosition: {x: -0.41, y: 9.91, z: -18.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 37, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.1, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,74 +2734,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1278090523}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &677979832
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1212181980883072583, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_Name
-      value: Arrow
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.260084
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3547152866091011726, guid: a3e81577256b046b1b090a14bbf8c6c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a3e81577256b046b1b090a14bbf8c6c6, type: 3}
 --- !u!1 &690273554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,14 +3074,6 @@ PrefabInstance:
     - target: {fileID: 1364922359172550, guid: 1aaf3ef80841d9c4990a27fee328eb1c, type: 3}
       propertyPath: m_Name
       value: PF Conifer Small BOTD URP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4689083990643298, guid: 1aaf3ef80841d9c4990a27fee328eb1c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4689083990643298, guid: 1aaf3ef80841d9c4990a27fee328eb1c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4689083990643298, guid: 1aaf3ef80841d9c4990a27fee328eb1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4409,14 +4333,6 @@ PrefabInstance:
       value: PF Conifer Bare BOTD URP (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4534264641828652, guid: 82a6bf9ca38d9d443997ccec084ba669, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534264641828652, guid: 82a6bf9ca38d9d443997ccec084ba669, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534264641828652, guid: 82a6bf9ca38d9d443997ccec084ba669, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.6
       objectReference: {fileID: 0}
@@ -4802,14 +4718,6 @@ PrefabInstance:
     - target: {fileID: 1743353957770956, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
       propertyPath: m_Name
       value: PF Conifer Tall BOTD URP (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534264641828652, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534264641828652, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4534264641828652, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6015,4 +5923,3 @@ SceneRoots:
   - {fileID: 788264982}
   - {fileID: 1349716556}
   - {fileID: 936967398}
-  - {fileID: 677979832}
