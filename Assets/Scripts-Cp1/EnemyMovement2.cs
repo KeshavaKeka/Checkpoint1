@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyAI2 : MonoBehaviour
 {
-    private float attackRange = 3.3f;
+    private float attackRange = 3.5f;
     private float attackCooldown = 1f;
 
     private Transform wallTarget;
